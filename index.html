@@ -57,7 +57,7 @@
 
   </head>
   
-  <body onload="digi(), lockload(), calculateBattery()">
+  <body onload="lockload(); setInterval(function () { calculateBattery() }, 5000); setInterval(function () { digi() }, 3000)">
     <div id="loading"></div>
     <div class="navbar">
       <ul>
@@ -96,8 +96,8 @@
         <li class="leftLi app_name" id="calculator">
           <p>Calculator</p>
         </li>
-        <li class="leftLi app_name" id="VScode">
-          <p>VScode</p>
+        <li class="leftLi app_name" id="Quake">
+          <p>Quake</p>
         </li>
         <li class="leftLi app_name" id="map">
           <p>Maps</p>
@@ -362,22 +362,21 @@
         />
         <hr class="point hidden" id="point-launchpad" />
       </button>
-      <button class="icon">
-        <img src="./icon/dock/appstore.png" alt="App Store Logo" />
+      
+      
+      <button class="icon" onclick="window.open('https://github.com', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')">
+        <img src="./icon/dock/github_logo.png" alt="GitHub Logo" class="hidden" />
       </button>
-      <button class="icon">
-        <img src="./icon/dock/message.png" alt="Messages Logo" />
+      
+      <button class="icon" onclick="window.open('https://stackedit.io', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')">
+        <img src="https://github.com/benweet/stackedit/blob/master/src/assets/favicon.png?raw=true" alt="StackEdit" class="hidden" />
       </button>
-      <button class="icon">
-        <img src="./icon/dock/music.png" alt="Music Logo" />
+      
+      <button class="icon open_Quake">
+        <img src="./icon/dock/quake_logo.png" alt="Quake apps" />
+        <hr class="point hidden" id="point-Quake" />
       </button>
-      <button class="icon open_vscode">
-        <img src="./icon/dock/vscode.svg" alt="Vscode apps" class="hidden" />
-        <hr class="point hidden" id="point-vscode" />
-      </button>
-      <button class="icon">
-        <img src="./icon/dock/mail.png" alt="Mail Logo" class="hidden" />
-      </button>
+      
       <button class="icon">
         <img src="./icon/dock/photos.png" alt="Photos Logo" class="hidden" />
       </button>
@@ -600,22 +599,24 @@
       <!--note app end-->
 
       <!-- Vscode app start-->
-      <div class="window Vscode">
+      <div class="window Quake">
         <div class="window__taskbar">
           <div class="window__taskbar--actions">
-            <button class="close-Vscode"></button>
-            <button class="backfull-Vscode"></button>
-            <button class="full-Vscode"></button>
+            <button class="close-Quake"></button>
+            <button class="backfull-Quake"></button>
+            <button class="full-Quake"></button>
           </div>
         </div>
         <div class="content">
-          <iframe
-            src="https://vscode.dev"
+          <embed
+            src="https://netQuake.io"
             height="100%"
             width="100%"
-          ></iframe>
+          >
         </div>
       </div>
+      
+      
       <!-- Vscode app end -->
       <div class="window maps">
         <div class="window__taskbar">
