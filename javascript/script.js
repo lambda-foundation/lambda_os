@@ -48,15 +48,16 @@ var clockElement = document.getElementById("clock");
 var clockWrapper = document.querySelector(".clock");
 var widgetsPanel = document.querySelector(".widgets-panel");
 
-var open_vscode = document.querySelector(".open_vscode");
-var Vscode_window = document.querySelector(".Vscode");
-var app_name_VScode = document.querySelector("#VScode");
-var close_Vscode = document.querySelector(".close-Vscode");
+var open_Quake = document.querySelector(".open_Quake");
+var Quake_window = document.querySelector(".Quake");
+var app_name_Quake = document.querySelector("#Quake");
+var close_Quake = document.querySelector(".close-Quake");
 var notes = document.querySelector(".content__sidebar--notes");
-var backfull_Vscode = document.querySelector(".backfull-Vscode");
-var full_Vscode = document.querySelector(".full-Vscode");
-var point_vscode = document.querySelector("#point-vscode");
+var backfull_Quake = document.querySelector(".backfull-Quake");
+var full_Quake = document.querySelector(".full-Quake");
+var point_Quake = document.querySelector("#point-Quake");
 var create_input = document.createElement("input");
+
 
 var open_map = document.querySelector(".open_map");
 var maps_window = document.querySelector(".maps");
@@ -110,9 +111,9 @@ function handleMinimize(Minimize) {
   Minimize.style.height = "430px";
 }
 function handleFullScreen(maximize) {
-  maximize.style.maxWidth = "95%";
-  maximize.style.minWidth = "95%";
-  maximize.style.height = "90%";
+  maximize.style.maxWidth = "100%";
+  maximize.style.minWidth = "100%";
+  maximize.style.height = "95%";
 }
 
 function close_window(close, point, appName) {
@@ -188,7 +189,7 @@ close_map.addEventListener("click", () =>
 deleting.addEventListener("click", handleDeleting);
 full.addEventListener("click", () => handleFullScreen(terminal));
 fullnote.addEventListener("click", () => handleFullScreen(note));
-full_Vscode.addEventListener("click", () => handleFullScreen(Vscode_window));
+full_Quake.addEventListener("click", () => handleFullScreen(Quake_window));
 full_map.addEventListener("click", () => handleFullScreen(maps_window));
 notes.addEventListener("click", handleNotes);
 opening.addEventListener("click", () =>
@@ -200,16 +201,16 @@ openNote.addEventListener("click", () =>
 opencalculator.addEventListener("click", () =>
   open_window(calculator, point_cal, app_name_calculator)
 );
-open_vscode.addEventListener("click", () =>
-  open_window(Vscode_window, point_vscode, app_name_VScode)
+open_Quake.addEventListener("click", () =>
+  open_window(Quake_window, point_Quake, app_name_Quake)
 );
 open_map.addEventListener("click", () =>
   open_window(maps_window, point_map, app_name_maps)
 );
-close_Vscode.addEventListener("click", () =>
-  close_window(Vscode_window, point_vscode, app_name_VScode)
+close_Quake.addEventListener("click", () =>
+  close_window(Quake_window, point_Quake, app_name_Quake)
 );
-backfull_Vscode.addEventListener("click", () => handleMinimize(Vscode_window));
+backfull_Quake.addEventListener("click", () => handleMinimize(Quake_window));
 backfull_map.addEventListener("click", () => handleMinimize(maps_window));
 closecal.addEventListener("click", () =>
   close_window(calculator, point_cal, app_name_calculator)
@@ -304,7 +305,7 @@ $(function () {
   $(".terminal").draggable();
   $(".note").draggable();
   $(".calculator").draggable();
-  $(".Vscode").draggable();
+  $(".Quake").draggable();
   $(".spotlight_serach").draggable();
   $(".maps").draggable();
 });
@@ -463,3 +464,36 @@ batteryButton.addEventListener("click", () => {
   batteryButton.classList.toggle("selected");
 });
 /********** End Battery **********/
+
+function setFullscreen () {
+    var elem = document.documentElement;
+
+    /* View in fullscreen */
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+document.addEventListener("keydown",function(e){
+    var charCode = e.charCode || e.keyCode || e.which;
+    if (charCode == 27){
+        return false;
+    }
+});
+
+// loading = document.getElementById("loading");
+
+// loading.addEventListener("mouseenter", function (e) {
+    
+//   document.body.style.cursor = "url(../cursor/cursor.svg); pointer";
+// });
+
+// loading.addEventListener("onleave", function (e) {
+//   document.body.style.cursor = "url(../cursor/cursor.svg); pointer";
+// });
+
+
