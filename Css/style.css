@@ -46,6 +46,7 @@ body {
   user-select: none;
   font-family: "monospace", sans-serif;
   background: url("../background/monterey.jpg");
+  cursor: url("https://tobiasahlin.com/static/cursors/default.png"), pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,7 +90,7 @@ body {
   position: relative;
   font-size: 14px;
   margin: 0 4px;
-  cursor: url(./cursor/Link.cur), pointer;
+  /*cursor: url("https://tobiasahlin.com/static/cursors/default.png"), pointer;*/
   text-shadow: 0 3px 10px rgba(0, 0, 0, 0.288);
   transition: 0.2s;
   -webkit-tap-highlight-color: transparent;
@@ -143,7 +144,7 @@ li.app_name {
 .navbar__right .battery {
   margin: 0;
   display: flex;
-  cursor: pointer;
+  /*cursor: pointer;*/
   user-select: none;
   position: relative;
   border-radius: 4px;
@@ -265,7 +266,7 @@ li.app_name {
   border-radius: 4px;
   color: white;
   width: 100%;
-  cursor: pointer;
+  /*cursor: pointer;*/
   user-select: none;
 }
 
@@ -323,7 +324,7 @@ li > ul > li > button {
   border-radius: 5px;
   transition: 80ms;
   font-size: 14px;
-  cursor: url(./cursor/Link.cur), pointer;
+  /*cursor: url(./cursor/Link.cur), pointer;*/
 }
 
 li > ul > li > button:hover {
@@ -409,7 +410,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   font-size: 20px;
   transition: all 120ms ease-in-out;
   font-family: "monospace", sans-serif;
-  cursor: url(../cursor/Link.cur), pointer;
+  /*cursor: url(../cursor/Link.cur), pointer;*/
 }
 .sound,
 .brightness {
@@ -442,7 +443,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   box-shadow: -2px 0px 3px -2px #5f6063, -340px 0 0 320px #ffffff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.226);
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .grid__controling input[type="range"]::-webkit-slider-runnable-track {
@@ -614,23 +615,23 @@ li > .menu__container > .grid__controling .control_center--grid {
 }
 
 .dock .icon:nth-child(3):hover::after {
-  content: "App store";
+  content: "GitHub";
 }
 
 .dock .icon:nth-child(4):hover::after {
-  content: "Message";
+  content: "StackEdit";
 }
 
 .dock .icon:nth-child(5):hover::after {
-  content: "Itunes music";
+  content: "Quake";
 }
 
 .dock .icon:nth-child(6):hover::after {
-  content: "VScode";
+  content: "Quake";
 }
 
 .dock .icon:nth-child(7):hover::after {
-  content: "Mail";
+  content: "StackEdit";
 }
 
 .dock .icon:nth-child(8):hover::after {
@@ -835,7 +836,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   border-radius: 9px;
   transition: 0.2s;
   padding: 5px;
-  cursor: url(/cursor/Link.cur), pointer;
+  /*cursor: url(/cursor/Link.cur), pointer;*/
 }
 
 .window__taskbar--right .containerSearch {
@@ -1026,7 +1027,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   display: flex;
   place-items: center;
   flex-direction: column;
-  cursor: url(/cursor/Link.cur), pointer;
+  /*cursor: url(/cursor/Link.cur), pointer;*/
 }
 
 .launchpad .child-launchpad img {
@@ -1320,7 +1321,7 @@ li > .menu__container > .grid__controling .control_center--grid {
   margin: 0 0 4px 0;
   display: flex;
   flex-direction: row;
-  cursor: url(./cursor/Link.cur), pointer;
+  /*cursor: url(./cursor/Link.cur), pointer;*/
 }
 .context-menu ul button:hover {
   background: var(--color-blue-800);
